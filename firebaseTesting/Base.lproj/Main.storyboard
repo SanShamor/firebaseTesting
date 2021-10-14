@@ -1,24 +1,116 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="firebaseTesting" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hwy-U1-4Bp">
+                                <rect key="frame" x="15" y="64" width="384" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="XFT-Xa-b6a"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Primarch's surname here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YcV-W1-K7z">
+                                <rect key="frame" x="40" y="562" width="334" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="Rg9-EO-Ljv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3FV-nv-LdI">
+                                <rect key="frame" x="45" y="712" width="324" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="wXA-tD-UEg"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Imperial Fists"/>
+                                <connections>
+                                    <action selector="showRogalDornButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XkN-yW-PJR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZN-7T-o62">
+                                <rect key="frame" x="45" y="782" width="324" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="C6D-3m-puY"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Space Wolves"/>
+                                <connections>
+                                    <action selector="showLemanRussButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JGZ-4Z-fq7"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Primarch's name here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sma-Ep-Uyn">
+                                <rect key="frame" x="40" y="509" width="334" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="hG7-gF-WEZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SGR-gd-y4T">
+                                <rect key="frame" x="45" y="642" width="324" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="tyS-ue-eNU"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Emperor's Children"/>
+                                <connections>
+                                    <action selector="showFulgrimButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qfu-mV-APE"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VZN-7T-o62" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="53f-2Q-8mw"/>
+                            <constraint firstItem="3FV-nv-LdI" firstAttribute="top" secondItem="SGR-gd-y4T" secondAttribute="bottom" constant="30" id="87X-pV-5JA"/>
+                            <constraint firstItem="VZN-7T-o62" firstAttribute="top" secondItem="3FV-nv-LdI" secondAttribute="bottom" constant="30" id="AC5-8i-qsB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VZN-7T-o62" secondAttribute="bottom" constant="40" id="BYb-2m-rdy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3FV-nv-LdI" secondAttribute="trailing" constant="45" id="Lqx-sv-p3o"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SGR-gd-y4T" secondAttribute="trailing" constant="45" id="Ml8-yr-PVb"/>
+                            <constraint firstItem="sma-Ep-Uyn" firstAttribute="top" secondItem="Hwy-U1-4Bp" secondAttribute="bottom" constant="45" id="OZc-Bs-W7h"/>
+                            <constraint firstItem="Hwy-U1-4Bp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="Oko-3I-wxH"/>
+                            <constraint firstItem="3FV-nv-LdI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="Uuf-CO-G7N"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VZN-7T-o62" secondAttribute="trailing" constant="45" id="X4s-Ny-NHt"/>
+                            <constraint firstItem="SGR-gd-y4T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="ePm-0B-TTR"/>
+                            <constraint firstItem="YcV-W1-K7z" firstAttribute="top" secondItem="sma-Ep-Uyn" secondAttribute="bottom" constant="25" id="lex-yW-g16"/>
+                            <constraint firstItem="sma-Ep-Uyn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="mdc-32-A4E"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YcV-W1-K7z" secondAttribute="trailing" constant="40" id="nRa-Bd-Z2b"/>
+                            <constraint firstItem="YcV-W1-K7z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="rpj-hq-wXK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Hwy-U1-4Bp" secondAttribute="trailing" constant="15" id="yC1-QO-iI1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sma-Ep-Uyn" secondAttribute="trailing" constant="40" id="yke-2I-nAY"/>
+                            <constraint firstItem="Hwy-U1-4Bp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="zZZ-lm-OBs"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="sma-Ep-Uyn" id="9ID-Qb-sQS"/>
+                        <outlet property="picture" destination="Hwy-U1-4Bp" id="caG-PX-i7E"/>
+                        <outlet property="surnameLabel" destination="YcV-W1-K7z" id="2ff-W3-y9g"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="30" y="66"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
